@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!--
+  Upstream remotes
+  -->
+  <remote name="oe"          alias="origin"  fetch="https://github.com/openembedded" />
+  <remote name="yocto"       alias="origin"  fetch="https://git.yoctoproject.org" />
+
+  <!--
+  Internal remotes
+  -->
+  <remote name="cu-ecen-aeld"  alias="origin"  fetch="ssh://git@github.com/cu-ecen-aeld" />
+  <remote name="renkh"         alias="origin"  fetch="ssh://git@github.com/renkh" />
+
+  <!--
+  The manifest is the glue that incorporates all of the individual Yocto repos
+  together with Google Repo
+  -->
+  <project name="final-project-renkh"     path="."              remote="cu-ecen-aeld"  groups="oe,tag"  revision="master" />
+
+  <!--
+  Repos containing the bitbake recipes collected into meta layers
+  -->
+  <project name="poky"                    path="oe/poky"        remote="yocto"         groups="oe"      revision="master"/>
+  <project name="meta-openembedded"       path="oe/meta-oe"     remote="oe"            groups="oe"      revision="master"/>
+
+  <project name="meta-aaeon"              path="oe/meta-aaeon"  remote="renkh"         groups="oe"      revision="main"/>
+
+</manifest>

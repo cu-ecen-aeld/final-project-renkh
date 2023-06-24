@@ -4,6 +4,7 @@
   Upstream remotes
   -->
   <remote name="oe"          alias="origin"  fetch="https://github.com/openembedded" />
+  <remote name="tegra"       alias="origin"  fetch="https://github.com/OE4T/meta-tegra" />
   <remote name="yocto"       alias="origin"  fetch="https://git.yoctoproject.org" />
 
   <!--
@@ -22,6 +23,7 @@
   Repos containing the bitbake recipes collected into meta layers
   -->
   <project name="poky"                    path="oe/poky"        remote="yocto"         groups="oe"      revision="master"/>
+  <project name="meta-tegra"              path="oe/meta-tegra"  remote="tegra"         groups="oe"      revision="master"/>
   <project name="meta-openembedded"       path="oe/meta-oe"     remote="oe"            groups="oe"      revision="master"/>
 
   <project name="meta-aaeon"              path="oe/meta-aaeon"  remote="renkh"         groups="oe"      revision="main"/>

@@ -1,4 +1,14 @@
 *.bkp
-build
 oe
 .repo
+
+# White list configuration files in `build*/conf` we want to track,
+# but ignore everything else.
+
+/build*/*
+
+!/build*/conf/
+/build*/conf/*
+
+!/build*/conf/bblayers.conf
+!/build*/conf/local.conf
